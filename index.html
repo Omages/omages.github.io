@@ -64,6 +64,9 @@
             More Research
           </a>
           <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/3dlg-hcvc/DuoduoCLIP">
+              DuoDuoCLIP: Efficient 3D Understanding with Multi-View Images, 2024
+            </a> 
             <a class="navbar-item" href="https://shapeformer.github.io">
               Shape generation and completion (ShapeFormer), CVPR 2022
             </a>
@@ -156,14 +159,14 @@
                     </a>
                   </span>
                   <!-- Dataset Link. -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                 <a href="./"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
                 </div>
 
               </div>
@@ -180,28 +183,86 @@
         <video id="teaser" autoplay controls height="100%">
           <source src="static/videos/vid_teaser_v0v1.mp4" type="video/mp4">
         </video>
-        <h2 class="subtitle">
-          To facilitate generative modeling, we first compress the input partial point cloud to our proposed sequence
-          representation <i>VQDIF</i> (the sparse voxels in blue shades).
-          Conditioned on the partial sequence, <i>ShapeFormer</i> predicts a distribution of the possible completed
-          shapes, and their VQDIFs can be sequentially sampled from this distribution.
-          By decoding these complete VQDIF sequences, multiple completed shapes can be extracted.
-        </h2>
       </div>
     </div>
   </section>
 
 
-  <section class="hero teaser">
+  <section class="section">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <h2 class="subtitle">
-          To be done.
-        </h2>
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a new approach for generating realistic 3D models with UV maps through a representation termed "Object Images," encapsulating surface geometry and appearance within a 64x64 pixel image. By converting complex 3D shapes into this manageable 2D format, we address the challenges of irregular connectivity and topological complexity inherent in polygonal meshes. This method allows us to leverage image generation models, such as Diffusion Transformers, for 3D shape generation. Evaluated on the ABO dataset, our approach achieves results comparable to recent 3D generative models in terms of geometric p-FID, while naturally supporting PBR materials.
+            </p>
+          </div> 
+        </div>
       </div>
-    </div>
-  </section>
 
+
+      <div class="content has-text-justified">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <table align="center" width="900px">
+          <tbody>
+            <tr>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="45deg 0deg 2.5m" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
 
   <section class="section" id="BibTeX">
