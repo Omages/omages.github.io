@@ -67,11 +67,17 @@
             <a class="navbar-item" href="https://github.com/3dlg-hcvc/DuoduoCLIP">
               DuoDuoCLIP: Efficient 3D Understanding with Multi-View Images, 2024
             </a> 
+            <a class="navbar-item" href="https://arxiv.org/abs/2403.13289">
+              Survey: Text-to-3D Shape Generation, 2024 
+            </a>
+            <a class="navbar-item" href="http://raywzy.com/CAD/">
+              CAD: Photorealistic 3D Generation via Adversarial Distillation, 2023
+            </a>
             <a class="navbar-item" href="https://shapeformer.github.io">
-              Shape generation and completion (ShapeFormer), CVPR 2022
+              Shape generation and completion (ShapeFormer), 2022
             </a>
             <a class="navbar-item" href="https://vcc.tech/research/2019/RPMNet">
-              Motion prediction (RPM-Net), SIGGRAPH Asia 2019
+              Motion prediction (RPM-Net), 2019
             </a>
           </div>
         </div>
@@ -150,7 +156,7 @@
               </span> -->
                   <!-- Code Link. -->
                   <span class="link-block">
-                    <a href="./"
+                    <a href="https://github.com/3dlg-hcvc/omages"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
@@ -181,8 +187,11 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay controls height="100%">
-          <source src="static/videos/vid_teaser_v0v1.mp4" type="video/mp4">
+          <source src="static/videos/vid_teaser_v0.mp4" type="video/mp4">
         </video>
+        <h2 class="subtitle">
+          We present Object Images (Omages): An homage to the classic Geometry Images.
+        </h2>
       </div>
     </div>
   </section>
@@ -196,38 +205,38 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We introduce a new approach for generating realistic 3D models with UV maps through a representation termed "Object Images," encapsulating surface geometry and appearance within a 64x64 pixel image. By converting complex 3D shapes into this manageable 2D format, we address the challenges of irregular connectivity and topological complexity inherent in polygonal meshes. This method allows us to leverage image generation models, such as Diffusion Transformers, for 3D shape generation. Evaluated on the ABO dataset, our approach achieves results comparable to recent 3D generative models in terms of geometric p-FID, while naturally supporting PBR materials.
+              We introduce a new approach for generating realistic 3D models with UV maps through a representation termed "Object Images." This approach encapsulates surface geometry, appearance, and patch structures within a 64x64 pixel image, effectively converting complex 3D shapes into a more manageable 2D format. By doing so, we address the challenges of both geometric and semantic irregularity inherent in polygonal meshes. This method allows us to use image generation models, such as Diffusion Transformers, directly for 3D shape generation. Evaluated on the ABO dataset, our generated shapes with patch structures achieve point cloud FID comparable to recent 3D generative models, while naturally supporting PBR material generation.
             </p>
           </div> 
         </div>
       </div>
 
-
-      <div class="content has-text-justified">
+      <!-- 3D model viewer. -->
+      <!-- <div class="content has-text-justified">
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <table align="center" width="900px">
           <tbody>
             <tr>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="45deg 55deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                <model-viewer src="./static/glbs/testmirror.glb" camera-orbit="45deg 55deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="45deg 55deg 2.5m"
                   alt="45deg 0deg 2.5m" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="45deg 55deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="45deg 55deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
@@ -236,25 +245,25 @@
 
             <tr>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="110deg 25deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="110deg 25deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="110deg 25deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
               </td>
               <td>
-                <model-viewer src="./static/testchair.glb" camera-orbit="110deg 25deg 2.5m"
+                <model-viewer src="./static/glbs/testchair.glb" camera-orbit="110deg 25deg 2.5m"
                   alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
                   auto-rotate="" ar="" ar-status="not-presenting">
                 </model-viewer>
@@ -262,7 +271,60 @@
             </tr>
           </tbody>
         </table>
+      </div> -->
+
+      <h2 class="title is-3">Motivation</h2>
+      <div class="content has-text-justified">
+        <p>
+          Recently, 3D generative models have shown impressive results in synthesizing 3D objects. However, many of the current 3D generative models treat 3D shapes as a "statue" like objects. In contrary to the many high-quality human-made 3D assets which contains rich geometric and semantically meaningful patches, the statue-like objects are difficult to edit, animate and interact with. For example, the <a href="https://sketchfab.com/3d-models/headphone-with-stand-4ffedc9bffad4a549f6e0a46b0f92b05">headphone</a> shown below has intricate geometric parts that its "statue" version does not capture. Also, on the right example <a href="https://sketchfab.com/3d-models/book-pack-658cf47227a141e8abc607e455b1be7b">the pack of book</a> consists of multiple books standing closely to each other, which is very difficult to separate through current single-view reconstruction techniques. The core challenge to generate 3D shapes with proper geometric connectivity and semantic part structures lies at the <b>irregularity</b> of these properties, since most recent techinques require regular, tensorial input. We find that these irregularities can be effectively handled through packing the geometry, patch structures and material into an image format, which we term as "Object Images" or "omages" (A kind of Multi-Chart Geometry Images). In this work, we explore to use image diffusion model to generate low-resolution omages to show this paradigm of 3D generation is possible. For more details, please refer to our paper.
+        </p>
       </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body"> 
+          <img src="./static/images/fig_motivation.png" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+
+      <h2 class="title is-3">Method</h2>
+      <div class="content has-text-justified">
+        <p>
+          We first preprocess the UV-unwrapped 3D shapes into 1024x1024 omages and then downsample it with special care to 64x64 omages. Then we just flatten the omage into a sequence and learn their distribution through a Diffusion Transformer (DiT) of patch size 1. The motivation of using DiT is that we observe the generation of omages is essentially image generation and set generation combined. A very cool thing is that during the denoising process, discrete structures emerges out of the continuous image format, and the generated results exhibit great variety in the number and sizes of patches.
+        </p>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/fig_pipeline.png" class="interpolation-image"
+            alt="Interpolation end reference image." />
+          <!-- line break -->
+          <br>
+          <img src="./static/images/fig_teaser.png" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+
+
+      <h2 class="title is-3">More results samples</h2>
+      <div class="content has-text-justified">
+        <p>
+          Here we show some more results of our model trained on the ABO dataset. Although there are noticable gaps between the patches, the overall alignment of the patches demonstrate the potential of this 3D generation paradigm. We also show the potential of our model to generate objects with PBR materials, like mirrors.
+        </p>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/fig_gallery.png" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+
+      <!-- <h2 class="title is-3">What's next?</h2>
+      <div class="content has-text-justified">
+        <p>
+          In the 
+          We advocate that the omages can be quite handy for 3D shapes, and we are excited to see the potential of this representation in various applications. We are also interested in exploring the potential of omages in other tasks, such as 3D reconstruction, 3D editing, and 3D animation. We hope this work can inspire more research in this direction.
+        </p>
+      </div> -->
+
 
 
   <section class="section" id="BibTeX">
