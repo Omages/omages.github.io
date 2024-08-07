@@ -1,15 +1,17 @@
-# ShapeFormer
+# Omages
 
-This is the repository that contains source code for the [ShapeFormer website](https://shapeformer.github.io).
+This is the repository that contains source code for the [omages 64x website](https://omages.github.io/).
 
-If you find ShapeFormer useful for your work please cite:
+If you find our work useful for your work please cite:
 
 ```
-@article{yan2021shapeformer,
-  author    = {Yan, Xingguang and Lin, Liqiang and Mitra, Niloy and Lischinski, Dani and Cohen-Or, Danny and Huang, Hui},
-  title     = {Shapeformer: Transformer-based Shape Completion via Sparse Representation},
-  journal   = {ArXiv},
-  year      = {2021},
+@misc{yan2024omages64,
+  title={An Object is Worth 64x64 Pixels: Generating 3D Object via Image Diffusion}, 
+  author={Xingguang Yan and Han-Hung Lee and Ziyu Wan and Angel X. Chang},
+  year={2024},
+  eprint={2408.03178},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2408.03178}, 
 }
 ```
 
